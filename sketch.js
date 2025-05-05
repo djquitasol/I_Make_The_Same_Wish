@@ -1,12 +1,14 @@
 // help from ai
 
 let matchImg;
+let sailFont;
 let letters = [];
 let baseText = "Make A Wish";
 let fireDist = 100;
 
 function preload() {
   matchImg = loadImage("assets/lit_match.png");
+  sailFont = loadFont("sketch1/assets/Sail-Regular.ttf");
 }
 
 function setup() {

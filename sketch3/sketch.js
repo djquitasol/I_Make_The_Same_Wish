@@ -10,9 +10,9 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   
   let flamePositions = [
-    { x: width/3 - 80, y: height/2 - 168 },
-    { x: width/3 + 6, y: height/2 - 205 },
-    { x: width/3 + 82, y: height/2 - 228 },
+    { x: width/3 - 105, y: height/2 - 168 },
+    { x: width/3 - 20, y: height/2 - 205 },
+    { x: width/3 + 60, y: height/2 - 228 },
     { x: width/2 - 90, y: height/2 - 238 },
     { x: width/2 - 15, y: height/2 - 240 },
     { x: width/2 + 90, y: height/2 - 230 },
