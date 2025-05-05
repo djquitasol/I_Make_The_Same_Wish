@@ -13,7 +13,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight).parent('canvasContainer');
-  textFont('Sail');
+  textFont(sailFont);
   textSize(150);
   noCursor();
 
