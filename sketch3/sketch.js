@@ -1,3 +1,5 @@
+// ai : "help create an animation out of small shapes to mimic a birthday candle flame that reacts to the cursor. the flame should extinguish when the cursor hovers and relight on a timer"
+
 let cakeImg;
 let flames = [];
 let cakeOffsetY = 70;
@@ -10,9 +12,9 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   
   let flamePositions = [
-    { x: width/3 - 105, y: height/2 - 168 },
-    { x: width/3 - 20, y: height/2 - 205 },
-    { x: width/3 + 60, y: height/2 - 228 },
+    { x: width/2 - 325, y: height/2 - 168 },
+    { x: width/2 - 238, y: height/2 - 205 },
+    { x: width/2 - 160, y: height/2 - 228 },
     { x: width/2 - 90, y: height/2 - 238 },
     { x: width/2 - 15, y: height/2 - 240 },
     { x: width/2 + 90, y: height/2 - 230 },
@@ -46,7 +48,7 @@ class Flame {
     this.smokeParticles = [];
   }
 
-  update() {
+update() {
     let d = dist(mouseX, mouseY, this.x, this.y);
     if (d < 50 && this.active) {
       this.active = false;
@@ -93,7 +95,7 @@ class Flame {
     }
   }
 
-  display() {
+display() {
     noStroke();
     if (this.active) {
       for (let p of this.particles) {
@@ -102,6 +104,9 @@ class Flame {
         p.col.setAlpha(p.col._getAlpha() - p.alphaDecay); 
 
         if (p.life > 0 && p.r > 0) {
+          fill(250, random(20, 120));
+          ellipse(p.x, p.y, p.r * 1.8, p.r * 2.5);
+        
           fill(p.col);
           ellipse(p.x, p.y, p.r, p.r * 1.5); 
         }

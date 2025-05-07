@@ -5,7 +5,6 @@ body {
   height: 100%;
   overflow: hidden;
 
-
   color: #bf1b2a;
   color: #ffab36;
   color: #fffb7e;
@@ -24,7 +23,7 @@ body#about {
 }
 
 body#one {
-  background-image: url('../assets/BG2.1.png');
+  background-image: url("../assets/BG2.1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +31,7 @@ body#one {
 }
 
 body#two {
-  background-image: url('../assets/BG3.png');
+  background-image: url("../assets/BG3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,14 +39,12 @@ body#two {
 }
 
 body#three {
-  background-image: url('../assets/BG4.png');
+  background-image: url("../assets/BG4.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
-
 
 #canvasContainer {
   position: absolute;
@@ -71,12 +68,17 @@ h1 {
   color: #211d1e;
   font-size: 6rem;
   z-index: 10;
-text-align: center;}
+  text-align: center;
+}
 
 #theysay {
-  top: 30%;
+  top: 28%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  -webkit-text-stroke: 1.5px #ffab36;
+
+  text-shadow: 2px 2px 2px #e6c3f0;
 }
 
 #imakethe {
@@ -84,6 +86,10 @@ text-align: center;}
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+
+  -webkit-text-stroke: 1.5px #ffab36;
+
+  text-shadow: 2px 2px 2px #ffcee4;
 }
 
 #title {
@@ -92,32 +98,37 @@ text-align: center;}
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-text-stroke: 1.5px #e6c3f0;
+
+  text-shadow: 2px 2px 2px #ffcee4;
 }
 
 h2 {
   position: relative;
   text-align: center;
   top: 230px;
-  
+
   font-family: "Sail", cursive;
   font-size: 3rem;
   color: #f6f3e4;
+
+  text-shadow: 2px 2px 2px #ffab36;
 }
 
 p {
   font-family: "Melodrama", serif;
   color: #f6f3e4;
 
-  font-size: 2rem;
+  font-size: 2.2rem;
   transform: translate(-50%, -50%);
   margin: 0.5rem;
 
   position: relative;
   left: 50%;
-  top: 260px;
+  top: 265px;
   text-align: center;
 
-  text-shadow: 2px 2px 2px #2D5030;
+  text-shadow: 2px 2px 2px #1c71b3;
 }
 
 .nav-swirl-button {
@@ -125,7 +136,7 @@ p {
   transition: transform 0.2s ease;
   position: fixed;
   right: 30px;
-  bottom: 40px
+  bottom: 40px;
 }
 .nav-swirl-button:hover {
   transform: scale(1.2);
@@ -136,17 +147,10 @@ p {
   transition: transform 0.2s ease;
   position: fixed;
   left: 20px;
-  bottom: 40px
+  bottom: 40px;
 }
 .nav-img-button:hover {
   transform: scale(1.2);
-}
-
-#one {
-  background-image: url("../assets/index.html-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 #box {
@@ -163,9 +167,5 @@ p {
 
 .flame {
   color: orange;
-  text-shadow:
-    0 0 5px #ff6600,
-    0 0 15px #ff3300,
-    0 0 30px #ff0000;
+  text-shadow: 0 0 5px #ff6600, 0 0 15px #ff3300, 0 0 30px #ff0000;
 }
-

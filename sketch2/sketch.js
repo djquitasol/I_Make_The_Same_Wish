@@ -1,4 +1,5 @@
-// help from ai
+// ai : "help create an interactive continuous clicking loop for an uploaded image. the next photo should appear behind the current one and the images should fall naturally like leaves"
+
 let images = [];
 let pageIndex = 0;
 let falling = false;
@@ -45,7 +46,9 @@ function draw() {
     push();
     translate(baseX, y);
     scale(1.23);
-    image(images[pageIndex], 0, 0);
+
+    drawGlow(images[pageIndex], 0, 0); 
+    image(images[pageIndex], 0, 0);  
     pop();
   } else {
     velocity += 0.2;
@@ -57,23 +60,19 @@ function draw() {
 
     let nextIndex = (pageIndex + 1) % images.length;
 
-push();
-translate(width / 2, height / 2);
-scale(1.24);
-image(images[nextIndex], 0, 0);
-pop();
+    push();
+    translate(width / 2, height / 2);
+    scale(1.24);
+    image(images[nextIndex], 0, 0);
+    pop();
 
     push();
     translate(x, y);
     rotate(rotation);
     scale(1.25);
 
-    if (fallFromLeft) {
-      image(images[pageIndex], 0, 0);
-    } else {
-      image(images[pageIndex], 0, 0);
-    }
-
+    drawGlow(images[pageIndex], 0, 0);
+    image(images[pageIndex], 0, 0);
     pop();
 
     if (y > height + images[pageIndex].height) {
@@ -82,6 +81,18 @@ pop();
       resetPage();
     }
   }
+}
+
+function drawGlow(img, x, y) {
+  for (let i = 3; i >= 1; i--) {
+    push();
+    tint(255, 15 * i);
+    let s = 1 + i * 0.02; 
+    scale(s);
+    image(img, x, y);
+    pop();
+  }
+  noTint();
 }
 
 function mousePressed() {
@@ -101,4 +112,3 @@ function resetPage() {
   time = 0;
   fallFromLeft = !fallFromLeft;
 }
-

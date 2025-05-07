@@ -1,3 +1,5 @@
+// ai : "help create an animation where balloons enter the screen from the bottom and exit at the top, fading in and out. The animation should loop and be smooth, with randomized speeds and delays for each balloon's movement"
+
 let balloonImg;
 let balloons = [];
 let i = 0;

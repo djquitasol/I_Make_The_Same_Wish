@@ -1,4 +1,4 @@
-// help from ai
+// ai : "help create an interactive animation where letters on the screen glow and react to the cursor's proximity, simulating fire"
 
 let matchImg;
 let sailFont;
